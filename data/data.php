@@ -1,2 +1,2 @@
 <?php
-  $passwordLength = 0;
+  $passwordLength = 8;

@@ -25,12 +25,13 @@
 
     include __DIR__ . '/partials/formLength.php';
 
+    session_start();
+    
     if(isset($_SESSION["password"]))
       header("Location: ./ShowPassword.php");
 
     if(isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])){
       $passwordLength = $_GET["passwordLength"];
-      session_start();
       $_SESSION["passwordLength"] = $passwordLength;
       $_SESSION["password"] = GeneratePassword($passwordLength);
       header("Location: ./ShowPassword.php");

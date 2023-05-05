@@ -24,7 +24,13 @@
     include __DIR__ . '/functions/general.php';
 
     include __DIR__ . '/partials/formLength.php';
-  ?>
+
+    if(isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])){
+      $passwordLength = $_GET["passwordLength"];
+    ?>
+      <h3>Lunghezza: <?php echo $passwordLength; ?></h3>
+      <h2><?php GeneraPassword(); ?></h2>
+    <?php } ?>
 
 </body>
 </html>

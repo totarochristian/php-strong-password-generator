@@ -2,7 +2,10 @@
   include __DIR__ . '/../data/data.php';
 
   function GeneratePassword($length){
-    return "password";
+    $pass = "";
+    for($i=0; $i<$length; $i++)
+      $pass = $pass . GenerateRandomCharacter();
+    return $pass;
   }
 
   function GenerateRandomCharacter(){

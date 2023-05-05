@@ -25,6 +25,9 @@
 
     include __DIR__ . '/partials/formLength.php';
 
+    if(isset($_SESSION["password"]))
+      header("Location: ./ShowPassword.php");
+
     if(isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])){
       $passwordLength = $_GET["passwordLength"];
       session_start();

@@ -21,7 +21,7 @@
   -->
 
   <?php
-    include __DIR__ . '/functions/general.php';
+    include __DIR__ . '/functions/functions.php';
 
     include __DIR__ . '/partials/formLength.php';
 

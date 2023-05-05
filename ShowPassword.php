@@ -14,5 +14,6 @@
     ?>
       <h3>Lunghezza: <?php echo $_SESSION["passwordLength"]; ?></h3>
       <h2>Password: <?php echo $_SESSION["password"]; ?></h2>
+      <a href="./logout.php">Torna alla definizione della lunghezza</a>
 </body>
 </html>

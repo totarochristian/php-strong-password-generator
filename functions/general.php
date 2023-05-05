@@ -1,7 +1,7 @@
 <?php
   include __DIR__ . '/../data/data.php';
 
-  function GeneratePassword(){
+  function GeneratePassword($length){
     return "password";
   }
 

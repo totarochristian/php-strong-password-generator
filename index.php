@@ -29,7 +29,7 @@
       $passwordLength = $_GET["passwordLength"];
     ?>
       <h3>Lunghezza: <?php echo $passwordLength; ?></h3>
-      <h2>Password: <?php echo GeneratePassword(); ?></h2>
+      <h2>Password: <?php echo GeneratePassword($passwordLength); ?></h2>
     <?php } ?>
 
 </body>

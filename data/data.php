@@ -1,0 +1,2 @@
+<?php
+  $passwordLength = 0;

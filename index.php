@@ -27,10 +27,11 @@
 
     if(isset($_GET["passwordLength"]) && !empty($_GET["passwordLength"])){
       $passwordLength = $_GET["passwordLength"];
-    ?>
-      <h3>Lunghezza: <?php echo $passwordLength; ?></h3>
-      <h2>Password: <?php echo GeneratePassword($passwordLength); ?></h2>
-    <?php } ?>
-
+      session_start();
+      $_SESSION["passwordLength"] = $passwordLength;
+      $_SESSION["password"] = GeneratePassword($passwordLength);
+      header("Location: ./ShowPassword.php");
+    }
+  ?>
 </body>
 </html>
